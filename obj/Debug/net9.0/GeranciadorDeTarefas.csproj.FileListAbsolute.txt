@@ -1,0 +1,15 @@
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\bin\Debug\net9.0\GeranciadorDeTarefas.exe
+C:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\bin\Debug\net9.0\GeranciadorDeTarefas.deps.json
+C:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\bin\Debug\net9.0\GeranciadorDeTarefas.runtimeconfig.json
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\bin\Debug\net9.0\GeranciadorDeTarefas.dll
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\bin\Debug\net9.0\GeranciadorDeTarefas.pdb
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.AssemblyInfoInputs.cache
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.AssemblyInfo.cs
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.csproj.CoreCompileInputs.cache
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.sourcelink.json
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.dll
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\refint\GeranciadorDeTarefas.dll
+c:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.pdb
+C:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\GeranciadorDeTarefas.genruntimeconfig.cache
+C:\Users\Alunos\Documents\Murilo Maciel\GerenciadorDeTarefas\obj\Debug\net9.0\ref\GeranciadorDeTarefas.dll
