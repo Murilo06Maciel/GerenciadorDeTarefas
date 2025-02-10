@@ -8,7 +8,7 @@ namespace GerenciarTarefas
         {
             Console.Clear();
             Console.WriteLine("Digite a descrição da tarefa:");
-            string descrição = Console.ReadLine();
+            string descriçãoTarefa = Console.ReadLine();
             Formatacao.CorVerde();
             Console.WriteLine("Tarefa adicionada com sucesso!");        
         }
