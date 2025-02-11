@@ -4,15 +4,15 @@ namespace GerenciarTarefas
 {
     class Gerenciar
     {
-        public static void AdicionarTarefa()
+        private List<Tarefa> tarefas = new List<Tarefa>();
+        private int contadorId = 1;
+        public static void AdicionarTarefa(string descricao)
         {
-            Console.Clear();
-            Console.WriteLine("Digite a descrição da tarefa:");
-            string descriçãoTarefa = Console.ReadLine();
-            Formatacao.CorVerde();
-            Console.WriteLine("Tarefa adicionada com sucesso!");        
+            var novaTarefa = new Tarefa(contadorId++, descricao);
+            Tarefas.Add(novaTarefa);
+            Console.WriteLine("\tTarefa adicionada com sucesso!", ConsoleColor.Green);        
         }
-        public static void ConcluirTarefa()
+        public static void ConcluirTarefa(int id)
         {
             Console.WriteLine();
         }

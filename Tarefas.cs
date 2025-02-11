@@ -8,7 +8,7 @@ namespace Tarefas
         public string Descricao { get; set; }
         public bool Concluida { get; set; }
 
-        public Tarefas()
+        public Tarefas(int id, string descricao)
         {
             ID = id;
             Descricao = descricao;
@@ -17,7 +17,7 @@ namespace Tarefas
 
         public static void ExibirTarefa()
         {
-            Formatacao.Cor($"\[{(Concluida ? "X" : " ")}] ID: (id) - {Descricao}", ConsoleColor.Yellow);
+            Formatacao.Cor($"\t[{(Concluida ? "X" : " ")}] ID: (id) - {Descricao}", ConsoleColor.Yellow);
         }
     }
 }
