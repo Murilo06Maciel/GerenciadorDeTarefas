@@ -3,8 +3,7 @@ using Layout;
 
 Formatacao.ImprimirCabeçalho();
 int opcao;
-do
-        {
+
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
             Console.WriteLine("3 - Concluir Tarefa");
@@ -16,23 +15,21 @@ do
             switch (opcao)
             {
                 case 1:
-                    Gerenciar.AdicionarTarefa();
+                    Gerenciador.AdicionarTarefa();
                     break;
                 case 2:
-                    Gerenciar.ListarTarefa();
+                    Gerenciador.ListarTarefa();
                     break;
                 case 3:
-                    Gerenciar.ConcluirTarefa();
+                    Gerenciador.ConcluirTarefa();
                     break;
                 case 4:
-                    Gerenciar.RemoverTarefa();
+                    Gerenciador.RemoverTarefa();
                     break;
                 case 0:
-                    Gerenciar.Sair();
+                    Gerenciador.Sair();
                     break;
                 default:
                     Console.WriteLine("Opção inválida.");
                     break;
             }
-
-        } while (opcao > 4);

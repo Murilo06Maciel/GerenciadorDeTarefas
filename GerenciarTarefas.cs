@@ -7,6 +7,7 @@ namespace GerenciarTarefas
     {
         private List<Tarefa> tarefas = new List<Tarefa>();
         private int contadorId = 1;
+
         public void AdicionarTarefa(string descricao)
         {
             var novaTarefa = new Tarefa(contadorId++, descricao);
