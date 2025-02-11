@@ -2,12 +2,16 @@ namespace Layout
 {
    class Formatacao
    {
-        public static void Cor()
+        public static void Cor(string mensagem, ConsoleColor cor)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = cor;
+            Console.WriteLine(mensagem);
+            Console.ResetColor();
+
+            // Console.ForegroundColor = ConsoleColor.Green;
+            // Console.ForegroundColor = ConsoleColor.White;
+            // Console.ForegroundColor = ConsoleColor.Yellow;
+            // Console.ForegroundColor = ConsoleColor.Red;
         }
         public static void ImprimirCabeçalho()
         {

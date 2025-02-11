@@ -1,30 +1,37 @@
 using Layout;
+using Tarefas;
 
 namespace GerenciarTarefas
 {
-    class Gerenciar
+    class Gerenciador
     {
         private List<Tarefa> tarefas = new List<Tarefa>();
         private int contadorId = 1;
-        public static void AdicionarTarefa(string descricao)
+        public void AdicionarTarefa(string descricao)
         {
             var novaTarefa = new Tarefa(contadorId++, descricao);
-            Tarefas.Add(novaTarefa);
+            tarefas.Add(novaTarefa);
             Console.WriteLine("\tTarefa adicionada com sucesso!", ConsoleColor.Green);        
         }
-        public static void ConcluirTarefa(int id)
+        public void ConcluirTarefa(int id)
+        {
+            var tarefa = tarefas.Find( t => t.Id == id);
+            if(tarefa != null)
+            {
+                tarefa.Concluida = true;
+                Console.Clear();
+                ListarTarefa();
+            }
+        }
+        public void ListarTarefa()
         {
             Console.WriteLine();
         }
-        public static void ListarTarefa()
+        public void RemoverTarefa()
         {
             Console.WriteLine();
         }
-        public static void RemoverTarefa()
-        {
-            Console.WriteLine();
-        }
-        public static void Sair()
+        public void Sair()
         {
             Console.WriteLine();
         }

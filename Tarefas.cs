@@ -2,22 +2,22 @@ using Layout;
 
 namespace Tarefas
 {
-    class Tarefas
+    class Tarefa
     {
-        public int ID { get; private set; }
+        public int Id { get; private set; }
         public string Descricao { get; set; }
         public bool Concluida { get; set; }
 
-        public Tarefas(int id, string descricao)
+        public Tarefa(int id, string descricao)
         {
-            ID = id;
+            Id = id;
             Descricao = descricao;
             Concluida = false;
         }
 
-        public static void ExibirTarefa()
+        public void ExibirTarefa()
         {
-            Formatacao.Cor($"\t[{(Concluida ? "X" : " ")}] ID: (id) - {Descricao}", ConsoleColor.Yellow);
+            Formatacao.Cor($"\t[{(Concluida ? "X" : " ")}] ID: {Id} - {Descricao}", ConsoleColor.Yellow);
         }
     }
 }
