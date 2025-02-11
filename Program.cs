@@ -3,6 +3,8 @@ using Layout;
 
 Formatacao.ImprimirCabeçalho();
 int opcao;
+Gerenciador gerenciador = new Gerenciador();
+
 
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
@@ -15,19 +17,23 @@ int opcao;
             switch (opcao)
             {
                 case 1:
-                    Gerenciador.AdicionarTarefa();
+                    Console.WriteLine("Digite a descrição da tarefa:");
+                    string descricao = Console.ReadLine();
+                    gerenciador.AdicionarTarefa(descricao);
                     break;
                 case 2:
-                    Gerenciador.ListarTarefa();
+                    gerenciador.ListarTarefa();
                     break;
                 case 3:
-                    Gerenciador.ConcluirTarefa();
+                Console.WriteLine("Digite o ID da tarefa a ser concluída:");
+                int idTarefa = int.Parse(Console.ReadLine());
+                    gerenciador.ConcluirTarefa(idTarefa);
                     break;
                 case 4:
-                    Gerenciador.RemoverTarefa();
+                    gerenciador.RemoverTarefa();
                     break;
                 case 0:
-                    Gerenciador.Sair();
+                    gerenciador.Sair();
                     break;
                 default:
                     Console.WriteLine("Opção inválida.");
