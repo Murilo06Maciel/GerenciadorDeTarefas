@@ -1,11 +1,12 @@
-﻿using GerenciarTarefas;
+﻿using System.ComponentModel.Design;
+using GerenciarTarefas;
 using Layout;
 
 Formatacao.ImprimirCabeçalho();
 int opcao;
 Gerenciador gerenciador = new Gerenciador();
-
-
+inicio:
+          
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
             Console.WriteLine("3 - Concluir Tarefa");
@@ -17,10 +18,11 @@ Gerenciador gerenciador = new Gerenciador();
             switch (opcao)
             {
                 case 1:
+                Console.Clear();
                     Console.WriteLine("Digite a descrição da tarefa:");
                     string descricao = Console.ReadLine();
                     gerenciador.AdicionarTarefa(descricao);
-                    break;
+                    goto inicio;
                 case 2:
                     gerenciador.ListarTarefa();
                     break;
