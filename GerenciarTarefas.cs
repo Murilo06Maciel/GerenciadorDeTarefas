@@ -12,26 +12,25 @@ namespace GerenciarTarefas
         {
             var novaTarefa = new Tarefa(ProximoId++, descricao);
             tarefas.Add(novaTarefa);
-             Console.WriteLine($"[ ] ID: {novaTarefa.Id} - {novaTarefa.Descricao}");
-            ProximoId++;
-            Console.WriteLine("\tTarefa adicionada com sucesso!", ConsoleColor.Green);        
+            Formatacao.Cor("\nTarefa adicionada com sucesso!\n", ConsoleColor.Green);       
         }
         public void ConcluirTarefa(int id)
         {
+            Formatacao.Cor("\nTarefa concluída!\n", ConsoleColor.Green);
             var tarefa = tarefas.Find( t => t.Id == id);
             if(tarefa != null)
             {
                 tarefa.Concluida = true;
-                Console.Clear();
-                ListarTarefa();
             }
-        }
-        public void MostrarTarefas()
+            foreach (var t in tarefas)
         {
-            Console.WriteLine("Tarefas:\n");
+           string status = t.Concluida ? "[X]" : "[ ]";
+            Formatacao.Cor($"{status} ID: {t.Id} - {t.Descricao}", ConsoleColor.Yellow);
+        }
         }
         public void ListarTarefa()
         {
+            Console.WriteLine("Tarefas:\n");
              if (tarefas.Count == 0)
         {
             Console.WriteLine("Nenhuma tarefa encontrada.");
@@ -41,16 +40,27 @@ namespace GerenciarTarefas
             foreach (var tarefa in tarefas)
         {
            string status = tarefa.Concluida ? "[X]" : "[ ]";
-            Console.WriteLine($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
+            Formatacao.Cor($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
         }
         }
-        public void RemoverTarefa()
+        public void RemoverTarefa(int id)
         {
-            Console.WriteLine();
+            var tarefa = tarefas.Find(t => t.Id == id);
+            if (tarefa != null)
+            {
+                tarefas.RemoveAll(t => t.Id == id);
+                Formatacao.Cor($"\nTarefa removida com sucesso!\n", ConsoleColor.Red);
+            }
+            else
+            {
+                Formatacao.Cor("\nTarefa não encontrada!\n", ConsoleColor.Red);
+            }
+
+            ListarTarefa();
         }
         public void Sair()
         {
-            Console.WriteLine();
+            Formatacao.Cor("\nSaindo...\n", ConsoleColor.Red);
         }
     }
 }

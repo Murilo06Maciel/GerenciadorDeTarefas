@@ -6,7 +6,7 @@ using Layout;
 int opcao;
 Gerenciador gerenciador = new Gerenciador();
 inicio:
-          Formatacao.ImprimirCabeçalho();
+            Formatacao.ImprimirCabeçalho();
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
             Console.WriteLine("3 - Concluir Tarefa");
@@ -19,22 +19,30 @@ inicio:
             {
                 case 1:
                 Console.Clear();
-                    Console.WriteLine("Digite a descrição da tarefa:");
+                    Console.Write("Digite a descrição da tarefa: ");
                     string descricao = Console.ReadLine();
                     gerenciador.AdicionarTarefa(descricao);
                     goto inicio;
                 case 2:
+                Console.Clear();
                     gerenciador.ListarTarefa();
-                    break;
+                    goto inicio;
                 case 3:
-                Console.WriteLine("Digite o ID da tarefa a ser concluída:");
-                int idTarefa = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    gerenciador.ListarTarefa();
+                    Console.WriteLine("\nDigite o ID da tarefa a ser concluída:");
+                    int idTarefa = int.Parse(Console.ReadLine());
                     gerenciador.ConcluirTarefa(idTarefa);
-                    break;
+                    goto inicio;
                 case 4:
-                    gerenciador.RemoverTarefa();
-                    break;
+                    Console.Clear();
+                    gerenciador.ListarTarefa();
+                    Console.WriteLine("\nDigite o ID da tarefa a ser removida:");
+                    int idRemover = int.Parse(Console.ReadLine());
+                    gerenciador.RemoverTarefa(idRemover);
+                    goto inicio;
                 case 0:
+                Console.Clear();
                     gerenciador.Sair();
                     break;
                 default:
