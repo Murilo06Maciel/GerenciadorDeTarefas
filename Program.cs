@@ -3,7 +3,7 @@ using GerenciarTarefas;
 using Layout;
 
 
-int opcao;
+int opcao; bool escolha;
 Gerenciador gerenciador = new Gerenciador();
 inicio:
             Formatacao.ImprimirCabeçalho();
@@ -26,7 +26,13 @@ inicio:
                 case 2:
                 Console.Clear();
                     gerenciador.ListarTarefa();
-                    goto inicio;
+                    Console.WriteLine("1) Voltar:");
+                    escolha = Console.ReadLine() == "1";
+                    if(escolha)
+                    {
+                        goto inicio;
+                    }
+                    break;
                 case 3:
                     Console.Clear();
                     gerenciador.ListarTarefa();
@@ -44,6 +50,7 @@ inicio:
                 case 0:
                 Console.Clear();
                     gerenciador.Sair();
+
                     break;
                 default:
                     Console.WriteLine("Opção inválida.");

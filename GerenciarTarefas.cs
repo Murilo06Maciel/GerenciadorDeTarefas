@@ -10,6 +10,11 @@ namespace GerenciarTarefas
 
         public void AdicionarTarefa(string descricao)
         {
+            foreach (var tarefa in tarefas)
+        {
+           string status = tarefa.Concluida ? "[X]" : "[ ]";
+            Formatacao.Cor($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
+        }
             var novaTarefa = new Tarefa(ProximoId++, descricao);
             tarefas.Add(novaTarefa);
             Formatacao.Cor("\nTarefa adicionada com sucesso!\n", ConsoleColor.Green);       
@@ -45,6 +50,11 @@ namespace GerenciarTarefas
         }
         public void RemoverTarefa(int id)
         {
+            foreach (var tarefa in tarefas)
+        {
+           string status = tarefa.Concluida ? "[X]" : "[ ]";
+            Formatacao.Cor($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
+        }
             var tarefa = tarefas.Find(t => t.Id == id);
             if (tarefa != null)
             {
