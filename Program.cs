@@ -2,11 +2,11 @@
 using GerenciarTarefas;
 using Layout;
 
-Formatacao.ImprimirCabeçalho();
+
 int opcao;
 Gerenciador gerenciador = new Gerenciador();
 inicio:
-          
+          Formatacao.ImprimirCabeçalho();
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
             Console.WriteLine("3 - Concluir Tarefa");

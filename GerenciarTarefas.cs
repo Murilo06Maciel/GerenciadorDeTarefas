@@ -26,20 +26,23 @@ namespace GerenciarTarefas
                 ListarTarefa();
             }
         }
+        public void MostrarTarefas()
+        {
+            Console.WriteLine("Tarefas:\n");
+        }
         public void ListarTarefa()
         {
              if (tarefas.Count == 0)
-    {
-        Console.WriteLine("Nenhuma tarefa encontrada.");
-        return;
-    }
+        {
+            Console.WriteLine("Nenhuma tarefa encontrada.");
+            return;
+        }
 
-    Console.WriteLine("\nLista de Tarefas:");
-    foreach (var tarefa in tarefas)
-    {
-        string status = tarefa.Concluida ? "[X]" : "[ ]";
-        Console.WriteLine($"{status} ID: {tarefa.Id} - {tarefa.Descricao}");
-    }
+            foreach (var tarefa in tarefas)
+        {
+           string status = tarefa.Concluida ? "[X]" : "[ ]";
+            Console.WriteLine($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
+        }
         }
         public void RemoverTarefa()
         {
