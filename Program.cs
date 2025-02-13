@@ -6,6 +6,7 @@ using Layout;
 int opcao; bool escolha;
 Gerenciador gerenciador = new Gerenciador();
 inicio:
+            gerenciador.ListarTarefa();
             Formatacao.ImprimirCabeçalho();
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
