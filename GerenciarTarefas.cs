@@ -36,12 +36,6 @@ namespace GerenciarTarefas
         public void ListarTarefa()
         {
             Console.WriteLine("Tarefas:\n");
-             if (tarefas.Count == 0)
-        {
-            Console.WriteLine("Nenhuma tarefa encontrada.");
-            return;
-        }
-
             foreach (var tarefa in tarefas)
         {
            string status = tarefa.Concluida ? "[X]" : "[ ]";
@@ -50,22 +44,12 @@ namespace GerenciarTarefas
         }
         public void RemoverTarefa(int id)
         {
-            foreach (var Rtarefa in tarefas)
-        {
-           string status = Rtarefa.Concluida ? "[X]" : "[ ]";
-            Formatacao.Cor($"{status} ID: {Rtarefa.Id} - {Rtarefa.Descricao}", ConsoleColor.Yellow);
-        }
-            var tarefa = tarefas.Find(t => t.Id == id);
+            var tarefa = tarefas.Find(Rtarefa => Rtarefa.Id == id);
             if (tarefa != null)
             {
-                tarefas.RemoveAll(t => t.Id == id);
+                tarefas.RemoveAll(Rtarefa => Rtarefa.Id == id);
                 Formatacao.Cor($"\nTarefa removida com sucesso!\n", ConsoleColor.Red);
             }
-            else
-            {
-                Formatacao.Cor("\nTarefa não encontrada!\n", ConsoleColor.Red);
-            }
-
             ListarTarefa();
         }
         public void Sair()
