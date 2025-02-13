@@ -21,6 +21,7 @@ inicio:
                 Console.Clear();
                     Console.Write("Digite a descrição da tarefa: ");
                     string descricao = Console.ReadLine();
+                    Console.Clear();
                     gerenciador.AdicionarTarefa(descricao);
                     goto inicio;
                 case 2:
@@ -39,6 +40,7 @@ inicio:
                     gerenciador.ListarTarefa();
                     Console.WriteLine("\nDigite o ID da tarefa a ser concluída:");
                     int idTarefa = int.Parse(Console.ReadLine());
+                    Console.Clear();
                     gerenciador.ConcluirTarefa(idTarefa);
                     goto inicio;
                 case 4:
@@ -46,6 +48,7 @@ inicio:
                     gerenciador.ListarTarefa();
                     Console.WriteLine("\nDigite o ID da tarefa a ser removida:");
                     int idRemover = int.Parse(Console.ReadLine());
+                    Console.Clear();
                     gerenciador.RemoverTarefa(idRemover);
                     goto inicio;
                 case 0:
