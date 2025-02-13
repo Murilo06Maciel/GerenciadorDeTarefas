@@ -26,10 +26,11 @@ inicio:
                 case 2:
                 Console.Clear();
                     gerenciador.ListarTarefa();
-                    Console.WriteLine("1) Voltar:");
+                    Console.WriteLine("\n\n1) Voltar:");
                     escolha = Console.ReadLine() == "1";
                     if(escolha)
                     {
+                        Console.Clear();
                         goto inicio;
                     }
                     break;
