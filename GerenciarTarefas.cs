@@ -27,10 +27,10 @@ namespace GerenciarTarefas
             {
                 tarefa.Concluida = true;
             }
-            foreach (var t in tarefas)
+            foreach (var Ctarefa in tarefas)
         {
-           string status = t.Concluida ? "[X]" : "[ ]";
-            Formatacao.Cor($"{status} ID: {t.Id} - {t.Descricao}", ConsoleColor.Yellow);
+           string status = Ctarefa.Concluida ? "[X]" : "[ ]";
+            Formatacao.Cor($"{status} ID: {Ctarefa.Id} - {Ctarefa.Descricao}", ConsoleColor.Yellow);
         }
         }
         public void ListarTarefa()
@@ -50,10 +50,10 @@ namespace GerenciarTarefas
         }
         public void RemoverTarefa(int id)
         {
-            foreach (var tarefa in tarefas)
+            foreach (var Rtarefa in tarefas)
         {
-           string status = tarefa.Concluida ? "[X]" : "[ ]";
-            Formatacao.Cor($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
+           string status = Rtarefa.Concluida ? "[X]" : "[ ]";
+            Formatacao.Cor($"{status} ID: {Rtarefa.Id} - {Rtarefa.Descricao}", ConsoleColor.Yellow);
         }
             var tarefa = tarefas.Find(t => t.Id == id);
             if (tarefa != null)
