@@ -1,1 +1,3 @@
-# GerenciadorDeTarefas
+# **GerenciadorDeTarefas**
+
+## O que faz?
