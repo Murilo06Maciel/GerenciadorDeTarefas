@@ -53,9 +53,7 @@ inicio:
                     gerenciador.RemoverTarefa(idRemover);
                     goto inicio;
                 case 0:
-                Console.Clear();
                     gerenciador.Sair();
-
                     break;
                 default:
                     Console.WriteLine("Opção inválida.");
