@@ -12,7 +12,7 @@ namespace GerenciarTarefas
         {
             var novaTarefa = new Tarefa(ProximoId++, descricao);
             tarefas.Add(novaTarefa);
-            Formatacao.Cor($"\nTarefa {descricao} adicionada com sucesso!\n", ConsoleColor.Green);       
+            Formatacao.Cor($"\n\tTarefa {descricao} adicionada com sucesso!", ConsoleColor.Green);       
         }
         public void ConcluirTarefa(int id)
         {
@@ -26,15 +26,15 @@ namespace GerenciarTarefas
         }
         public void ListarTarefa()
         {
-        Console.WriteLine("Tarefas:");
+        Console.WriteLine("\n\tTarefas:");
         if (tarefas.Count == 0)
         {
-            Formatacao.Cor("Nenhuma tarefa cadastrada.", ConsoleColor.Gray);
+            Formatacao.Cor("\tNenhuma tarefa cadastrada.", ConsoleColor.Gray);
         }
             foreach (var tarefa in tarefas)
         {
            string status = tarefa.Concluida ? "[X]" : "[ ]";
-            Formatacao.Cor($"{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
+            Formatacao.Cor($"\t{status} ID: {tarefa.Id} - {tarefa.Descricao}", ConsoleColor.Yellow);
         }
         }
         public void RemoverTarefa(int id)
@@ -44,12 +44,12 @@ namespace GerenciarTarefas
             {
                 tarefas.RemoveAll(Rtarefa => Rtarefa.Id == id);
                 ListarTarefa();
-                Formatacao.Cor($"\nTarefa removida com sucesso!\n", ConsoleColor.Red);
+                Formatacao.Cor($"\n\tTarefa removida com sucesso!", ConsoleColor.Red);
             }
         }
         public void Sair()
         {
-            Formatacao.Cor("\nSaindo...\n", ConsoleColor.Red);
+            Formatacao.Cor("\n\tSaindo...\n", ConsoleColor.Red);
         }
     }
 }
