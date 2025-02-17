@@ -22,7 +22,7 @@ namespace GerenciarTarefas
                 tarefa.Concluida = true;
             }
             ListarTarefa();
-            Formatacao.Cor("\nTarefa concluída!\n", ConsoleColor.Green);
+            Formatacao.Cor("\n\tTarefa concluída!", ConsoleColor.Green);
         }
         public void ListarTarefa()
         {
