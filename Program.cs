@@ -3,10 +3,9 @@ using GerenciarTarefas;
 using Layout;
 
 
-int opcao; bool escolha;
+int opcao;
 Gerenciador gerenciador = new Gerenciador();
 inicio:
-            gerenciador.ListarTarefa();
             Formatacao.ImprimirCabeçalho();
             Console.WriteLine("1 - Adicionar Tarefa");
             Console.WriteLine("2 - Listar Tarefas");
@@ -28,14 +27,7 @@ inicio:
                 case 2:
                 Console.Clear();
                     gerenciador.ListarTarefa();
-                    Console.WriteLine("\n\n1) Voltar:");
-                    escolha = Console.ReadLine() == "1";
-                    if(escolha)
-                    {
-                        Console.Clear();
-                        goto inicio;
-                    }
-                    break;
+                    goto inicio;
                 case 3:
                     Console.Clear();
                     gerenciador.ListarTarefa();
