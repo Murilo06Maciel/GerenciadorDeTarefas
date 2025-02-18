@@ -3,6 +3,13 @@
 ## O que é?
 Um gerenciador de tarefas ajuda a organizar, acompanhar e gerenciar atividades, prazos e responsabilidades, permitindo que indivíduos ou equipes tenham uma visão clara de suas demandas e prioridades. Com ele, é possível distribuir melhor o tempo, evitar esquecimentos, garantir o cumprimento de prazos e otimizar o fluxo de trabalho. Além disso, essa ferramenta contribui para a coordenação eficiente de múltiplas tarefas simultaneamente, facilitando o planejamento e a execução de projetos de maneira mais estruturada e produtiva.
 
+## Funcionalidades:
+- **Adicionar Tarefa**: Permite adicionar novas tarefas com uma descrição fornecida pelo usuário.
+- **Listar Tarefas**: Exibe todas as tarefas cadastradas no sistema.
+- **Concluir Tarefa**: Marca uma tarefa como concluída, fornecendo o ID da tarefa.
+- **Remover Tarefa**: Remove uma tarefa com base no ID fornecido pelo usuário.
+- **Sair**: Encerra o programa.
+
 # O gerenciador de tarefas:
 
 ### Menu
