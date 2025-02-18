@@ -17,7 +17,7 @@ namespace Layout
         {
             Console.WriteLine("\t\t\t\t╔════════════════════════════════════╗");
             Console.WriteLine("\t\t\t\t║       GERENCIADOR DE TAREFAS       ║");
-            Console.WriteLine("\t\t\t\t╚════════════════════════════════════╝n");
+            Console.WriteLine("\t\t\t\t╚════════════════════════════════════╝\n");
         }
 
    } 
